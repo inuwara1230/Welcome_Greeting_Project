@@ -6,6 +6,7 @@ ledpin = machine.Pin(16, machine.Pin.OUT)
 pixels = neopixel.NeoPixel(ledpin, 1)
 
 c= True
+
 while c:
     pixels[0] = (255, 0, 0)  
     pixels.write()  

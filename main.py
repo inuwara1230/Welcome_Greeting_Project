@@ -25,7 +25,7 @@ audio_out = I2S(
 #print("I2S initialized")
 
 print(f"files: {os.listdir()}")
-time.sleep(5)
+time.sleep(5) # Wait for 5 seconds before starting playback
 
 try:
     with open("cs1.wav", "rb") as f:

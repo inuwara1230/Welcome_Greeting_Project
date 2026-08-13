@@ -1,5 +1,5 @@
 import time
-import neopixel
+#import neopixel
 import os
 from machine import I2S,Pin
 

@@ -20,6 +20,7 @@ once the power power is supplied to the buck-converter the audion track will be 
 <img width="460" height="652" alt="final" src="https://github.com/user-attachments/assets/9da31537-f712-49b2-a96e-57be89e276ab" />
 
 <img width="707" height="460" alt="IMG_20260813_224655809_MFNR" src="https://github.com/user-attachments/assets/201a8357-e8f9-4b4d-a8ef-45d67f2737a6" />
+
 ## current state of the development/project
 project is completed
 

@@ -1,14 +1,10 @@
 import time
-#import neopixel
 import os
 from machine import I2S,Pin
 
-#ledpin = machine.Pin(16, machine.Pin.OUT)
-#pixels = neopixel.NeoPixel(ledpin, 1)
-
-BCLK_PIN = 10
-LRC_PIN = 11
-DATA_PIN = 12
+BCLK_PIN = 3 #10 
+LRC_PIN = 4 #11
+DATA_PIN = 5 #12
 
 audio_out = I2S(
     0,
@@ -18,29 +14,25 @@ audio_out = I2S(
     mode=I2S.TX,
     bits=16,
     format=I2S.MONO,
-    rate=48000,
+    rate=44100,
     ibuf=20000
 )
 
-#print("I2S initialized")
 
 print(f"files: {os.listdir()}")
-time.sleep(5) # Wait for 5 seconds before starting playback
+time.sleep(4) 
 
 try:
-    with open("cs1.wav", "rb") as f:
-        #print("file loaded")
+    with open("dolphin.wav", "rb") as f:
         
         f.seek(44)
-
         while True:
             data = f.read(1024)
             if not data:
                 break
             audio_out.write(data)
-    #print("Playback finished")
+    
 except Exception as e:
     print(f"An error occurred: {e}")
-
 finally:
     audio_out.deinit()

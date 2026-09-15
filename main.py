@@ -22,7 +22,7 @@ audio_out = I2S(
 
 
 print(f"files: {os.listdir()}")
-time.sleep(4) 
+time.sleep(3) 
 
 try:
     with open("only_dolphine.wav", "rb") as f:

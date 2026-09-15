@@ -2,9 +2,11 @@ import time
 import os
 from machine import I2S,Pin
 
-BCLK_PIN = 3 #10 
-LRC_PIN = 4 #11
+BCLK_PIN = 3 # pin 10 
+LRC_PIN = 4 # pin 11
 DATA_PIN = 5 #12
+
+#pin declaration
 
 audio_out = I2S(
     0,
@@ -23,7 +25,7 @@ print(f"files: {os.listdir()}")
 time.sleep(4) 
 
 try:
-    with open("dolphin.wav", "rb") as f:
+    with open("only_dolphine.wav", "rb") as f:
         
         f.seek(44)
         while True:
@@ -33,6 +35,6 @@ try:
             audio_out.write(data)
     
 except Exception as e:
-    print(f"An error occurred: {e}")
+    print(f"An error occurred please check again: {e}")
 finally:
     audio_out.deinit()
